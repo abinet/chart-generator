@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y bzip2 libfontconfig
 #COPY ./package.json ./
 
 #RUN npm install -g phantomjs --unsafe-perm
-ENV ACCEPT_HIGHCHARTS_LICENSE="YES"
+ENV ACCEPT_HIGHCHARTS_LICENSE="y"
+ENV HIGHCHARTS_VERSION="8.2.0"
 RUN npm install highcharts-export-server
 #RUN npm installphantomjs -g --unsafe-
 

@@ -3,7 +3,7 @@ const exporter = require('highcharts-export-server');
 
 //Export settings
 var exportSettings = {
-    type: 'png',
+    type: 'svg',
     options: {
         title: {
             text: 'My Chart'
@@ -33,6 +33,8 @@ exporter.initPool();
     above.
 */
 exporter.export(exportSettings, function (err, res) {
+    console.log(err);
+    console.log(res);
     //The export result is now in res.
     //If the output is not PDF or SVG, it will be base64 encoded (res.data).
     //If the output is a PDF or SVG, it will contain a filename (res.filename).
